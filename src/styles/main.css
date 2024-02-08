@@ -7,28 +7,28 @@ body {
 }
 
 .container {
-  border: 2px solid blue;
-  border-radius: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 20px;
   width: 800px;
   padding: 35px 40px;
   background-color: black;
 }
 
-header {
+.container header{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: grey;
+  
+  
+}
+
+header h2 {
+  font-size: 1.6rem;
 }
 
 header .column {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  font-size: 1.6rem;
+ 
 }
 
 header .column span {
@@ -68,47 +68,46 @@ header .column span {
   left: 2.1rem;
   background-color:#f0ffff;
 }
-li {
+.piano-keys .key  {
   list-style: none;
+  cursor: pointer;
+  user-select: none;
+  color: #a2a2a2;
+  position: relative;
+  text-transform: uppercase;
 }
-.piane-keys {
+.piano-keys {
   display: flex;
   margin-top: 40px;
-  background-color: #fff;
-
 }
 
-.piane-keys li {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  width: 600px;
-}
-
-li.white {
+.piano-keys .white {
   border: 1px solid black;
-  background-color: white;
+  border-radius: 8px;
+  background: linear-gradient(#fff 96%, #eee 4%);
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
-
-  height: 330px;
-  width: 50px;
+  height: 230px;
+  width: 70px;
 }
 
-li.black {
+.piano-keys .black {
   border: 1px solid black;
-  background-color: black;
-  color: white;
-  height: 180px;
-  width: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+  z-index: 2;
+  margin: 0 22px 0 -22px;
+  height: 140px;
+  width: 44px;
+ 
+}
+
+.piano-keys span{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
 }
